@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .bg{fill:#0d1117}.fg{fill:#f4f5f1}.ac{fill:#ff6a1a}
+    @media (prefers-color-scheme: dark){.bg{fill:#f4f5f1}.fg{fill:#0d1117}}
+  </style>
+  <rect class="bg" x="2" y="2" width="60" height="60" rx="14"/>
+  <text class="fg" x="32" y="41" text-anchor="middle" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="26" font-weight="700">BS</text>
+  <rect class="ac" x="16" y="47" width="32" height="4" rx="2"/>
+</svg>
