@@ -54,9 +54,12 @@
   // ---------- integration map: live log + hover ----------
   const log = document.getElementById('log');
   const ambient = [
+    ['time', 'timecards approved → payroll'],
     ['sync', 'Salesforce → HCM · accounts & contacts'],
+    ['benefits', 'enrollment deductions → payroll'],
     ['auth', 'SAML assertion validated · IdP → app'],
-    ['etl', 'payroll batch validated · 0 errors'],
+    ['payroll', 'batch validated · 0 errors'],
+    ['gl', 'payroll journal posted → general ledger'],
     ['report', 'client_earnings.sql → PostgreSQL'],
     ['migrate', 'legacy payroll history validated'],
     ['adopt', 'in-app guide published · targeted segment'],

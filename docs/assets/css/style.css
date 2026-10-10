@@ -171,6 +171,13 @@ ul, ol { list-style: none; }
 .node.hub rect { fill: var(--slab); stroke: var(--slab); }
 .node.hub text { fill: #fff; }
 .node.hub .sub { fill: #9aa3b2; }
+.node.hub .rule { stroke: rgba(255, 255, 255, .18); stroke-width: 1; }
+.node.hub .mods text { fill: #c9d1dc; font-size: 10px; }
+.node.hub .mods circle { fill: var(--green); }
+.node.hub .mods circle:nth-of-type(2) { fill: var(--blue); }
+.node.hub .mods circle:nth-of-type(3) { fill: var(--orange); }
+.node.hub .mods circle:nth-of-type(4) { fill: #a78bfa; }
+.node.hub .mods circle:nth-of-type(5) { fill: #facc15; }
 .node[data-node] { cursor: pointer; }
 .node[data-node]:hover rect, .node.on rect { fill: var(--tint); stroke: var(--blue); }
 .edge { fill: none; stroke: var(--ink); stroke-width: 1.2; stroke-dasharray: 4 5; opacity: .45; animation: dash 1.2s linear infinite; transition: opacity .2s, stroke .2s; }
