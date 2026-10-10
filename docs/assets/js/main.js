@@ -60,7 +60,9 @@
     ['auth', 'SAML assertion validated · IdP → app'],
     ['payroll', 'batch validated · 0 errors'],
     ['gl', 'payroll journal posted → general ledger'],
+    ['agent', 'data cleanup reviewed · duplicates merged'],
     ['report', 'client_earnings.sql → PostgreSQL'],
+    ['agent', 'compliance gaps flagged for review'],
     ['migrate', 'legacy payroll history validated'],
     ['adopt', 'in-app guide published · targeted segment'],
   ];
