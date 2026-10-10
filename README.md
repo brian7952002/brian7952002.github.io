@@ -38,6 +38,10 @@ To make it the wide featured card, add the `feature` class and an `.art` panel.
 **Change availability:** edit the `status:` tag in the hero and the
 contact paragraph near the bottom.
 
+**Update the résumé PDF:** export the latest résumé from Word *without the phone
+number* and save it over `docs/assets/Brian_Skelton_Resume.pdf` (keep that name;
+the download buttons link to it).
+
 **Regenerate the social preview image** after changing the headline:
 
 ```bash
