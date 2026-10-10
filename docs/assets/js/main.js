@@ -54,11 +54,11 @@
   // ---------- integration map: live log + hover ----------
   const log = document.getElementById('log');
   const ambient = [
-    ['sync', 'Salesforce → Workato · accounts & contacts'],
+    ['sync', 'Salesforce → HCM · accounts & contacts'],
     ['auth', 'SAML assertion validated · IdP → app'],
     ['etl', 'payroll batch validated · 0 errors'],
     ['report', 'client_earnings.sql → PostgreSQL'],
-    ['hcm', 'new hires pushed to payroll'],
+    ['migrate', 'legacy payroll history validated'],
     ['adopt', 'in-app guide published · targeted segment'],
   ];
   const time = () => new Date().toLocaleTimeString('en-US', { hour12: false });

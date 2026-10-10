@@ -38,7 +38,7 @@
   "url": "https://brian7952002.github.io/",
   "address": {"@type": "PostalAddress", "addressLocality": "Alpharetta", "addressRegion": "GA", "addressCountry": "US"},
   "alumniOf": ["Georgia Institute of Technology", "Valencia College", "Columbus State University"],
-  "knowsAbout": ["Solution architecture", "Systems integration", "Workato", "SQL", "Data migration", "SSO", "SAML", "Payroll", "HCM", "SaaS implementation"],
+  "knowsAbout": ["Solution architecture", "HCM", "SaaS implementation", "Systems integration", "API integration", "SQL", "Data migration", "SSO", "SAML", "Payroll"],
   "sameAs": ["https://www.linkedin.com/in/b-skelton/", "https://github.com/brian7952002"]
 }
 </script>
@@ -87,14 +87,14 @@
       </dl>
     </div>
 
-    <figure class="diagram" aria-label="Diagram of the systems I integrate, with Workato as the orchestration hub">
+    <figure class="diagram" aria-label="Diagram of the systems I integrate, with an HCM / SaaS platform at the center">
       <div class="bar"><span>integration-map.svg</span><span class="live">● live</span></div>
       <svg viewBox="0 0 520 380" role="img" aria-hidden="true">
         <g>
           <path class="edge" data-node="crm" id="e1" d="M260 190 C200 190 170 80 110 80"/>
-          <path class="edge" data-node="payroll" id="e2" d="M260 190 C320 190 350 80 410 80"/>
+          <path class="edge" data-node="api" id="e2" d="M260 190 C320 190 350 80 410 80"/>
           <path class="edge" data-node="db" id="e3" d="M260 190 C200 190 170 300 110 300"/>
-          <path class="edge" data-node="hcm" id="e4" d="M260 190 C320 190 350 300 410 300"/>
+          <path class="edge" data-node="migrate" id="e4" d="M260 190 C320 190 350 300 410 300"/>
           <path class="edge" data-node="sso" id="e5" d="M260 190 L80 190"/>
           <path class="edge" data-node="pendo" id="e6" d="M260 190 L440 190"/>
         </g>
@@ -106,16 +106,16 @@
           <circle r="4.5" class="p-orange"><animateMotion dur="1.8s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="linear"><mpath href="#e5"/></animateMotion></circle>
           <circle r="4.5" class="p-green"><animateMotion dur="2s" begin=".3s" repeatCount="indefinite"><mpath href="#e6"/></animateMotion></circle>
         </g>
-        <g class="node hub" transform="translate(205 160)"><rect width="110" height="60" rx="10"/><text x="55" y="27" text-anchor="middle" font-weight="600">WORKATO</text><text class="sub" x="55" y="44" text-anchor="middle">orchestration hub</text></g>
-        <g class="node" data-node="crm" data-log="sync|Salesforce → Workato · accounts &amp; contacts" transform="translate(40 58)"><rect width="140" height="44" rx="8"/><text x="12" y="20">Salesforce</text><text class="sub" x="12" y="34">CRM · accounts</text></g>
-        <g class="node" data-node="payroll" data-log="etl|payroll batch validated · earnings, deductions, tax" transform="translate(340 58)"><rect width="140" height="44" rx="8"/><text x="12" y="20">Payroll engine</text><text class="sub" x="12" y="34">earnings · tax</text></g>
+        <g class="node hub" transform="translate(190 158)"><rect width="140" height="64" rx="10"/><text x="70" y="28" text-anchor="middle" font-weight="600">HCM PLATFORM</text><text class="sub" x="70" y="46" text-anchor="middle">SaaS · payroll · HR</text></g>
+        <g class="node" data-node="crm" data-log="sync|Salesforce → HCM · accounts &amp; contacts" transform="translate(40 58)"><rect width="140" height="44" rx="8"/><text x="12" y="20">Salesforce</text><text class="sub" x="12" y="34">CRM · accounts</text></g>
+        <g class="node" data-node="api" data-log="api|third-party payload mapped · webhook delivered" transform="translate(340 58)"><rect width="140" height="44" rx="8"/><text x="12" y="20">APIs &amp; iPaaS</text><text class="sub" x="12" y="34">REST · Workato</text></g>
         <g class="node" data-node="db" data-log="report|custom PostgreSQL report → client dashboard" transform="translate(40 278)"><rect width="140" height="44" rx="8"/><text x="12" y="20">PostgreSQL</text><text class="sub" x="12" y="34">reporting · ETL</text></g>
-        <g class="node" data-node="hcm" data-log="hcm|employee records mapped · org structure synced" transform="translate(340 278)"><rect width="140" height="44" rx="8"/><text x="12" y="20">HCM / HRIS</text><text class="sub" x="12" y="34">employees · org</text></g>
+        <g class="node" data-node="migrate" data-log="migrate|legacy payroll history loaded · 0 variances" transform="translate(340 278)"><rect width="140" height="44" rx="8"/><text x="12" y="20">Data migration</text><text class="sub" x="12" y="34">legacy → new system</text></g>
         <g class="node" data-node="sso" data-log="auth|SAML assertion validated · IdP → app" transform="translate(10 168)"><rect width="76" height="44" rx="8"/><text x="10" y="20">SSO</text><text class="sub" x="10" y="34">SAML 2.0</text></g>
         <g class="node" data-node="pendo" data-log="adopt|in-app guide published · targeted segment" transform="translate(434 168)"><rect width="76" height="44" rx="8"/><text x="10" y="20">Pendo</text><text class="sub" x="10" y="34">adoption</text></g>
       </svg>
       <div class="log" id="log" aria-hidden="true"></div>
-      <figcaption class="sr-only">An animated map showing Salesforce, a payroll engine, PostgreSQL, HCM, SSO and Pendo all connected through Workato.</figcaption>
+      <figcaption class="sr-only">An animated map with an HCM / SaaS platform at the center, connected to Salesforce, APIs and iPaaS tools, PostgreSQL reporting, data migration, SSO and Pendo.</figcaption>
     </figure>
   </div>
 
@@ -123,20 +123,6 @@
   <section id="work" aria-labelledby="work-h">
     <div class="sh reveal"><span class="n">/01</span><h2 id="work-h">Case studies</h2><p>Each one: the problem as the business felt it, what I built, and the number that moved.</p></div>
     <div class="cases">
-      <article class="case reveal">
-        <div class="big"><span class="mono">PRIMEPAY · 2024–25</span><div class="m">↓ downtime<small>during client data migration</small></div></div>
-        <div class="body">
-          <h3>Workato recipe system for client migrations</h3>
-          <div class="meta">Integration architecture · Automation</div>
-          <div class="pbi">
-            <div><b>Problem</b>Each migration was hand-built, so clients lost access during cutover and every deployment started from scratch.</div>
-            <div><b>Build</b>A recipe-creation system in Workato with reusable connectors and validation steps that any migration could start from.</div>
-            <div><b>Impact</b>Less migration downtime, plus faster and more repeatable deployments across clients.</div>
-          </div>
-          <div class="stack"><span>Workato</span><span>REST APIs</span><span>PostgreSQL</span><span>ETL</span></div>
-        </div>
-      </article>
-
       <article class="case reveal">
         <div class="big" style="--slab:#2b50ff"><span class="mono">PAYLOCITY · 2022</span><div class="m">$1M<small>ROI · −58% client interactions</small></div></div>
         <div class="body">
@@ -148,6 +134,20 @@
             <div><b>Impact</b>58% fewer client interactions at those points, worth $1M in ROI.</div>
           </div>
           <div class="stack"><span>Pendo.io</span><span>SQL</span><span>Journey mapping</span><span>UX research</span></div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="big"><span class="mono">PRIMEPAY · 2024–25</span><div class="m">↓ downtime<small>during client data migration</small></div></div>
+        <div class="body">
+          <h3>Repeatable integrations for client data migrations</h3>
+          <div class="meta">Integration architecture · Data migration · HCM</div>
+          <div class="pbi">
+            <div><b>Problem</b>Each HR SaaS migration was hand-built, so clients lost access during cutover and every deployment started from scratch.</div>
+            <div><b>Build</b>Reusable integration templates with standard connectors, field mapping and validation steps that any client migration could start from.</div>
+            <div><b>Impact</b>Less migration downtime, plus faster and more repeatable deployments across clients.</div>
+          </div>
+          <div class="stack"><span>REST APIs</span><span>PostgreSQL</span><span>ETL</span><span>iPaaS (Workato)</span></div>
         </div>
       </article>
 
@@ -271,7 +271,7 @@
       <li class="stage done"><div class="s" aria-hidden="true">✓</div><div class="y">2017–19</div><h4>Account Manager III</h4><div class="c">Paylocity</div><p>$1.3M book of business at 98% retention; guided 80+ clients from setup to expansion.</p></li>
       <li class="stage done"><div class="s" aria-hidden="true">✓</div><div class="y">2019–21</div><h4>Technical Support Specialist II</h4><div class="c">Paylocity</div><p>350+ tickets a month, 100+ enhancement requests, SQL data integrity.</p></li>
       <li class="stage done"><div class="s" aria-hidden="true">✓</div><div class="y">2021–23</div><h4>Digital Engagement Specialist</h4><div class="c">Paylocity</div><p>Led the Pendo rollout (300+ guides) and built the team's governance model.</p></li>
-      <li class="stage done"><div class="s" aria-hidden="true">✓</div><div class="y">2023–26</div><h4>Technical Solutions Consultant</h4><div class="c">PrimePay</div><p>Workato automation, PostgreSQL reporting, SSO/SAML, technical delivery.</p></li>
+      <li class="stage done"><div class="s" aria-hidden="true">✓</div><div class="y">2023–26</div><h4>Technical Solutions Consultant</h4><div class="c">PrimePay</div><p>HR SaaS integrations &amp; automation, PostgreSQL reporting, SSO/SAML, technical delivery.</p></li>
       <li class="stage cur"><div class="s" aria-hidden="true">▶</div><div class="y">2026–now</div><h4>Enterprise Implementation Mgr &amp; Solutions Architect</h4><div class="c">Seso Inc.</div><p>Payroll/HCM integrations, high-volume data migration, process architecture.</p></li>
     </ol>
 
@@ -300,7 +300,7 @@
   <section id="spec" aria-labelledby="spec-h">
     <div class="sh reveal"><span class="n">/05</span><h2 id="spec-h">Spec sheet</h2></div>
     <div class="spec reveal">
-      <div><h4>Integration &amp; Data</h4><ul><li>Workato <span>Pro III</span></li><li>PostgreSQL · MySQL · MS SQL</li><li>Data migration &amp; ETL</li><li>REST / third-party APIs</li><li>SSO &amp; SAML</li></ul></div>
+      <div><h4>Integration &amp; Data</h4><ul><li>HCM &amp; payroll SaaS</li><li>REST / third-party APIs</li><li>Data migration &amp; ETL</li><li>PostgreSQL · MySQL · MS SQL</li><li>SSO &amp; SAML</li><li>iPaaS <span>Workato</span></li></ul></div>
       <div><h4>Platforms &amp; Code</h4><ul><li>Salesforce</li><li>Pendo.io <span>Admin · PLS</span></li><li>Python · Java · TypeScript</li><li>JavaScript · HTML / CSS</li><li>AWS <span>CCP</span></li></ul></div>
       <div><h4>Delivery</h4><ul><li>Implementation lifecycle</li><li>Requirements &amp; discovery</li><li>Solution architecture</li><li>Change management</li><li>QA, docs &amp; training</li></ul></div>
     </div>
