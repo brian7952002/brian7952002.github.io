@@ -15,6 +15,7 @@ Plain HTML, CSS and JavaScript. No framework, no build step.
 | `docs/assets/js/main.js` | Theme toggle, mobile menu, integration-map log, scroll reveals |
 | `docs/assets/img/` | Favicon and the social preview image (`og.png`) |
 | `docs/404.html` | Not-found page |
+| `docs/build-map/` | AI Build Map demo. Generated from the private `ai-build-map` repo with `npm run publish:portfolio`; don't edit by hand |
 | `tools/og-image.html` | Source for `og.png` (see below) |
 
 ## Run it locally
