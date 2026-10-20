@@ -1,6 +1,6 @@
 # brian7952002.github.io
 
-Personal portfolio for Brian Skelton, Solutions Architect & Technical Consultant.
+Personal portfolio for Brian Skelton, Technical Consultant & Implementation Specialist.
 Live at **https://brian7952002.github.io**.
 
 Plain HTML, CSS and JavaScript. No framework, no build step.
